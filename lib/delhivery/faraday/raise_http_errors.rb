@@ -28,8 +28,9 @@ module Delhivery
         end
 
         def error_message(response)
+          binding.pry
           msg = "#{response[:method].to_s.upcase} #{response[:url].to_s}: #{response[:status]}"
-          if errors = response[:body] && response[:body]["errors"]
+          if errors = response[:body] && response[:body]["detail"]
             msg << "\n"
             msg << errors.join("\n")
           end

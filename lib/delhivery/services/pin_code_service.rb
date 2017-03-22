@@ -13,6 +13,7 @@ module Delhivery
         connection.get(path, st: state_code)
       end
 
+      private
       def path
         "/c/api/pin-codes/json/"
       end

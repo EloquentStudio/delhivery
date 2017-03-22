@@ -44,12 +44,13 @@ module Delhivery
     end
 
     def run_request(method, route, body, headers)
+      default_headers = { 'Authorization' => "Token #{@token}", 'Accept' => 'application/json', "Content-Type" => 'application/json' }.freeze
       response = {}
         response = @connection.run_request(
           method,
           route,
           body,
-          { 'Authorization' => "Token #{@token}" }
+          default_headers.merge(headers)
         )
       log.debug(response.body)
       response

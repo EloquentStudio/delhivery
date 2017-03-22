@@ -14,6 +14,7 @@ require "delhivery/services/package_service"
 require "delhivery/services/packing_slip_service"
 require "delhivery/services/pickup_service"
 require "delhivery/services/pin_code_service"
+require "delhivery/services/warehouse_service"
 require "delhivery/services/way_bill_service"
 
 module Delhivery
