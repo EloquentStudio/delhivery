@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://test.delhivery.com/api/backend/clientwarehouse/create/
+    body:
+      encoding: UTF-8
+      string: '{"name":"AutomatedTestsWarehouse","registered_name":"AutomatedTests","email":"auutomated_tests@example.com","address":"123,
+        sector 40 Gurgaon","pin":"132103","phone":"8888888888","city":"Delhi","state":"Delhi","country":"India"}'
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Authorization:
+      - Token 6ae9242be35bdc8a2a3abc8681bbc2b01939ce86
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      allow:
+      - POST, OPTIONS
+      content-type:
+      - application/json
+      date:
+      - Wed, 29 Mar 2017 06:16:30 GMT
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains
+      vary:
+      - Accept, Cookie
+      x-frame-options:
+      - SAMEORIGIN
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"data": {"name": "AutomatedTestsWarehouse", "pincode": "132103", "phone":
+        8888888888, "client": "PROQUORE", "address": "123, sector 40 Gurgaon", "active":
+        false, "message": "Warehouse could not be marked active.Your request has been
+        forwarded to vendor Desk team and they will activate it in 24 hours"}, "success":
+        true, "error": ""}'
+    http_version: 
+  recorded_at: Wed, 29 Mar 2017 06:15:30 GMT
+recorded_with: VCR 3.0.3

@@ -2,7 +2,8 @@ module Delhivery
   class PackageService < BaseService
     class << self
       def create(params)
-        connection.post(create_path, params)
+        formatted_param = {format: 'json', data: params.to_json}
+        connection.post(create_path, formatted_param, {'Content-Type': 'application/x-www-form-urlencoded'})
       end
 
       def track_with_waybill_numbers(*waybill_numbers)

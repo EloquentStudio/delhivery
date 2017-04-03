@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://test.delhivery.com/fm/request/new/
+    body:
+      encoding: UTF-8
+      string: '{"pickup_time":"16:30:00","pickup_date":"20170330","pickup_location":"AutomatedTestsWarehouse","expected_package_count":4}'
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Authorization:
+      - Token 6ae9242be35bdc8a2a3abc8681bbc2b01939ce86
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      allow:
+      - POST, OPTIONS
+      content-type:
+      - application/json
+      date:
+      - Wed, 29 Mar 2017 07:00:06 GMT
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains
+      vary:
+      - Accept, Cookie
+      x-frame-options:
+      - SAMEORIGIN
+      content-length:
+      - '215'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"pickup_id": 4363128, "client_name": "PROQUORE", "pickup_location_name":
+        "AutomatedTestsWarehouse", "incoming_center_name": "HQ", "pickup_time": "16:30:00",
+        "pickup_date": "2017-03-30", "expected_package_count": 4}'
+    http_version: 
+  recorded_at: Wed, 29 Mar 2017 06:59:06 GMT
+recorded_with: VCR 3.0.3

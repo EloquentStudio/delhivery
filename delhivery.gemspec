@@ -34,10 +34,12 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'faraday_middleware'
   spec.add_dependency 'multi_json'
   spec.add_dependency 'null_logger'
+  spec.add_dependency "hashie"
 
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "vcr", '~> 3.0', '>= 3.0.3'
   spec.add_development_dependency "pry", "~> 0.10.3"
   spec.add_development_dependency "pry-nav", "~> 0.2.4"
   spec.add_development_dependency "coveralls", "~> 0.8.19"

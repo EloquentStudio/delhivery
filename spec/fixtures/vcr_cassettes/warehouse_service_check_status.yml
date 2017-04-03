@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://test.delhivery.com/api/backend/clientwarehouse/status/
+    body:
+      encoding: UTF-8
+      string: '{"name":"AutomatedTestsWarehouse"}'
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Authorization:
+      - Token 6ae9242be35bdc8a2a3abc8681bbc2b01939ce86
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      allow:
+      - POST, OPTIONS
+      content-type:
+      - application/json
+      date:
+      - Wed, 29 Mar 2017 06:18:07 GMT
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains
+      vary:
+      - Accept, Cookie
+      x-frame-options:
+      - SAMEORIGIN
+      content-length:
+      - '181'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"data": {"active": false, "message": "''AutomatedTestsWarehouse''
+        ClientWarehouse isn''t active.", "name": "AutomatedTestsWarehouse", "pincode":
+        132103}, "success": true, "error": ""}'
+    http_version: 
+  recorded_at: Wed, 29 Mar 2017 06:17:06 GMT
+recorded_with: VCR 3.0.3

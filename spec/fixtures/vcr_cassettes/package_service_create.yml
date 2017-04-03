@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://test.delhivery.com/api/cmu/create.json
+    body:
+      encoding: UTF-8
+      string: data=%7B%22shipments%22%3A%5B%7B%22city%22%3A%22Mundhwa%22%2C%22waybill%22%3A%22%22%2C%22total_amount%22%3A%22760.95%22%2C%22seller_cst%22%3A%22%22%2C%22name%22%3A%22Shweta+adlakha%22%2C%22weight%22%3A0.5%2C%22extra%22%3A%7B%22encryptedShipmentID%22%3Anull%7D%2C%22country%22%3A%22India%22%2C%22seller_tin%22%3A%22%22%2C%22state%22%3A%22Maharashtra%22%2C%22shipping_mode%22%3A%22Express%22%2C%22phone%22%3A%220000000000%22%2C%22add%22%3A%22B1+flat+no+704+prestige+panorama%2CKeshav+nagar%22%2C%22cod_amount%22%3A%220.00%22%2C%22pin%22%3A%22411036%22%2C%22products_desc%22%3A%22%22%2C%22payment_mode%22%3A%22Pre-paid%22%2C%22shipment_length%22%3A19.2%2C%22shipment_height%22%3A2.79%2C%22order%22%3A%2242892-122-10912%22%2C%22shipment_width%22%3A10.21%7D%5D%2C%22pickup_location%22%3A%7B%22city%22%3A%22New+Delhi%22%2C%22state%22%3A%22Delhi%22%2C%22name%22%3A%22PROQUORE%22%2C%22pin%22%3A%22110044%22%7D%7D&format=json
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Authorization:
+      - Token 6ae9242be35bdc8a2a3abc8681bbc2b01939ce86
+      Accept:
+      - application/json
+      Content-type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      allow:
+      - POST, OPTIONS
+      content-type:
+      - application/json
+      date:
+      - Mon, 03 Apr 2017 04:59:41 GMT
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains
+      vary:
+      - Accept, Cookie
+      x-frame-options:
+      - SAMEORIGIN
+      content-length:
+      - '444'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"cash_pickups_count": 0.0, "package_count": 1, "upload_wbn": "UPL6385691929386553831",
+        "replacement_count": 0, "pickups_count": 0, "packages": [{"status": "Success",
+        "client": "PROQUORE", "sort_code": "PNQ/VAD", "remarks": [""], "waybill":
+        "3132110000070", "cod_amount": 0.0, "payment": "Pre-paid", "serviceable":
+        true, "refnum": "42892-122-10912"}], "cash_pickups": 0.0, "cod_count": 0,
+        "success": true, "prepaid_count": 1, "cod_amount": 0.0}'
+    http_version: 
+  recorded_at: Mon, 03 Apr 2017 04:58:37 GMT
+recorded_with: VCR 3.0.3

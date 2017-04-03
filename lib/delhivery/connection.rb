@@ -8,10 +8,13 @@ module Delhivery
     def initialize(opts)
       @token = opts[:api_key]
       base_url = opts[:production] ? "https://track.delhivery.com/" : "https://test.delhivery.com"
-      @logger = ::Logger.new(STDOUT) #opts[:logger] || NullLogger.instance
+      @logger = ::Logger.new(STDOUT)
+      #@logger = opts[:logger] || NullLogger.instance
       @connection = ::Faraday.new(base_url) do |conn|
         conn.response :logger, @logger, bodies: true
         conn.request :json
+        conn.request :url_encoded
+        conn.response :mashify
         conn.response :json, :content_type => /\bjson$/
         conn.use Delhivery::Faraday::Response::RaiseHttpError
         conn.adapter ::Faraday.default_adapter
@@ -44,7 +47,7 @@ module Delhivery
     end
 
     def run_request(method, route, body, headers)
-      default_headers = { 'Authorization' => "Token #{@token}", 'Accept' => 'application/json', "Content-Type" => 'application/json' }.freeze
+      default_headers = { 'Authorization' => "Token #{@token}", 'Accept' => 'application/json', 'Content-Type': 'application/json'}.freeze
       response = {}
         response = @connection.run_request(
           method,

@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test.delhivery.com/c/api/pin-codes/json/?filter_codes=411008%2C411007%2C411006
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Authorization:
+      - Token 6ae9242be35bdc8a2a3abc8681bbc2b01939ce86
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 29 Mar 2017 06:01:57 GMT
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains
+      vary:
+      - Authorization, Cookie
+      x-frame-options:
+      - SAMEORIGIN
+      content-length:
+      - '683'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"delivery_codes": [{"postal_code": {"district": "Pune", "pin": 411006,
+        "max_amount": 0.0, "pre_paid": "Y", "cash": "Y", "pickup": "Y", "repl": "Y",
+        "cod": "Y", "sort_code": "PNQ/VAD", "is_oda": "N", "state_code": "MH", "max_weight":
+        0.0}}, {"postal_code": {"district": "Pune", "pin": 411007, "max_amount": 0.0,
+        "pre_paid": "Y", "cash": "Y", "pickup": "Y", "repl": "Y", "cod": "Y", "sort_code":
+        "PNQ/PAS", "is_oda": "N", "state_code": "MH", "max_weight": 0.0}}, {"postal_code":
+        {"district": "Pune", "pin": 411008, "max_amount": 0.0, "pre_paid": "Y", "cash":
+        "Y", "pickup": "Y", "repl": "Y", "cod": "Y", "sort_code": "PNQ/PDP", "is_oda":
+        "N", "state_code": "MH", "max_weight": 0.0}}]}'
+    http_version: 
+  recorded_at: Wed, 29 Mar 2017 06:00:57 GMT
+recorded_with: VCR 3.0.3

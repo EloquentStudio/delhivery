@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test.delhivery.com/c/api/pin-codes/json/?dt=2016-03-12
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Authorization:
+      - Token 6ae9242be35bdc8a2a3abc8681bbc2b01939ce86
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 29 Mar 2017 06:07:05 GMT
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains
+      vary:
+      - Authorization, Cookie
+      x-frame-options:
+      - SAMEORIGIN
+      content-length:
+      - '2275'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"delivery_codes": [{"postal_code": {"district": "Central Delhi", "pin":
+        110011, "max_amount": 0.0, "pre_paid": "Y", "cash": "Y", "pickup": "Y", "repl":
+        "Y", "cod": "Y", "sort_code": "DEL/JHA", "is_oda": "N", "state_code": "DL",
+        "max_weight": 0.0}}, {"postal_code": {"district": "South Delhi", "pin": 110024,
+        "max_amount": 0.0, "pre_paid": "Y", "cash": "N", "pickup": "Y", "repl": "Y",
+        "cod": "Y", "sort_code": "DEL/TUG", "is_oda": "N", "state_code": "DL", "max_weight":
+        0.0}}, {"postal_code": {"district": "West Delhi", "pin": 110026, "max_amount":
+        0.0, "pre_paid": "N", "cash": "N", "pickup": "N", "repl": "N", "cod": "N",
+        "sort_code": "None", "is_oda": "N", "state_code": "DL", "max_weight": 0.0}},
+        {"postal_code": {"district": "West Delhi", "pin": 110027, "max_amount": 0.0,
+        "pre_paid": "Y", "cash": "Y", "pickup": "Y", "repl": "Y", "cod": "Y", "sort_code":
+        "DEL/ROH", "is_oda": "N", "state_code": "DL", "max_weight": 0.0}}, {"postal_code":
+        {"district": "South West Delhi", "pin": 110045, "max_amount": 0.0, "pre_paid":
+        "Y", "cash": "Y", "pickup": "Y", "repl": "Y", "cod": "Y", "sort_code": "DEL/KIR",
+        "is_oda": "N", "state_code": "DL", "max_weight": 0.0}}, {"postal_code": {"district":
+        "Kota", "pin": 111111, "max_amount": 0.0, "pre_paid": "N", "cash": "N", "pickup":
+        "N", "repl": "N", "cod": "N", "sort_code": "None", "is_oda": "N", "state_code":
+        "AN", "max_weight": 0.0}}, {"postal_code": {"district": "Udaipur", "pin":
+        313002, "max_amount": 0.0, "pre_paid": "Y", "cash": "Y", "pickup": "Y", "repl":
+        "Y", "cod": "Y", "sort_code": "UDR/UDR", "is_oda": "N", "state_code": "RJ",
+        "max_weight": 0.0}}, {"postal_code": {"district": "Udaipur", "pin": 313003,
+        "max_amount": 0.0, "pre_paid": "Y", "cash": "Y", "pickup": "Y", "repl": "Y",
+        "cod": "Y", "sort_code": "UDR/UDR", "is_oda": "N", "state_code": "RJ", "max_weight":
+        0.0}}, {"postal_code": {"district": "Washim", "pin": 444505, "max_amount":
+        0.0, "pre_paid": "N", "cash": "N", "pickup": "N", "repl": "N", "cod": "N",
+        "sort_code": "DEL/TUG", "is_oda": "N", "state_code": "MH", "max_weight": 0.0}},
+        {"postal_code": {"district": "Gurgaon", "pin": 122001, "max_amount": 0.0,
+        "pre_paid": "Y", "cash": "Y", "pickup": "Y", "repl": "Y", "cod": "Y", "sort_code":
+        "GGN/DPC", "is_oda": "N", "state_code": "HR", "max_weight": 0.0}}]}'
+    http_version: 
+  recorded_at: Wed, 29 Mar 2017 06:06:05 GMT
+recorded_with: VCR 3.0.3

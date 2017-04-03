@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://test.delhivery.com/api/backend/clientwarehouse/edit/
+    body:
+      encoding: UTF-8
+      string: '{"name":"AutomatedTestsWarehouse","registered_name":"AutomatedTestsEdited","address":"New
+        Address Gurgaon","phone":"8888888899"}'
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Authorization:
+      - Token 6ae9242be35bdc8a2a3abc8681bbc2b01939ce86
+      Accept:
+      - application/json
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      allow:
+      - POST, OPTIONS
+      content-type:
+      - application/json
+      date:
+      - Wed, 29 Mar 2017 06:21:42 GMT
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains
+      vary:
+      - Accept, Cookie
+      x-frame-options:
+      - SAMEORIGIN
+      content-length:
+      - '232'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"data": {"name": "AutomatedTestsWarehouse", "pincode": 132103, "phone":
+        8888888899, "address": "New Address Gurgaon", "active": false, "message":
+        "client warehouse has been updated in HQ(Delhivery)."}, "success": true, "error":
+        ""}'
+    http_version: 
+  recorded_at: Wed, 29 Mar 2017 06:20:41 GMT
+recorded_with: VCR 3.0.3

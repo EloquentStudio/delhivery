@@ -1,0 +1,29 @@
+---
+:shipments:
+- :city: Mundhwa
+  :waybill: ''
+  :total_amount: '760.95'
+  :seller_cst: ''
+  :name: Shweta adlakha
+  :weight: 0.5
+  :extra:
+    :encryptedShipmentID: 
+  :country: India
+  :seller_tin: ''
+  :state: Maharashtra
+  :shipping_mode: Express
+  :phone: '0000000000'
+  :add: B1 flat no 704 prestige panorama,Keshav nagar
+  :cod_amount: '0.00'
+  :pin: '411036'
+  :products_desc: ''
+  :payment_mode: Pre-paid
+  :shipment_length: 19.2
+  :shipment_height: 2.79
+  :order: 42892-122-10912
+  :shipment_width: 10.21
+:pickup_location:
+  :city: New Delhi
+  :state: Delhi
+  :name: PROQUORE
+  :pin: '110044'
