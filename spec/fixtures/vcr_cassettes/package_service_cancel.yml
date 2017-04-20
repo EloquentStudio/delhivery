@@ -1,0 +1,180 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://test.delhivery.com/api/p/edit/
+    body:
+      encoding: UTF-8
+      string: '{"waybill":"3132110000070","cancellation":true}'
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Authorization:
+      - Token --api-key-here--
+      Accept:
+      - application/json
+      Content-type:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Mon, 03 Apr 2017 07:17:45 GMT
+      server:
+      - nginx
+      vary:
+      - Cookie
+      x-frame-options:
+      - SAMEORIGIN
+      transfer-encoding:
+      - chunked
+      connection:
+      - Close
+    body:
+      encoding: ASCII-8BIT
+      string: "\n\n<!doctype html>\n<script>\n    var unsupported_browser = false;\n</script>\n\n<!--[if
+        lte IE 8]>\n<script type=\"text/javascript\">unsupported_browser = true;</script>\n<![endif]-->\n\n<script>\nif
+        (unsupported_browser == true){\n    alert('Please use a modern browser to
+        continue...');\n    location.replace(\"http://browsehappy.com/\");\n}\n</script>\n\n<!--[if
+        lt IE 7 ]> <html class=\"no-js ie6\" lang=\"en\"> <![endif]-->\n<!--[if IE
+        7 ]>    <html class=\"no-js ie7\" lang=\"en\"> <![endif]-->\n<!--[if IE 8
+        ]>    <html class=\"no-js ie8\" lang=\"en\"> <![endif]-->\n<!--[if (gte IE
+        9)|!(IE)]><!-->\n\n<html class=\"no-js\" lang=\"en\">\n<!--<![endif]-->\n
+        \   <head>\n        <meta charset=\"utf-8\">\n        <!--<meta http-equiv=\"X-UA-Compatible\"
+        content=\"IE=edge,chrome=1\">-->\n        <meta name=\"description\" content=\"\">\n
+        \       <meta name=\"author\" content=\"\">\n        \n        <title>Delhivery
+        | </title>\n\n        <link rel=\"icon\" type=\"image/png\" href=\"/static/images/favicon.png\"
+        />\n        <!--[if !IE]>-->\n        <link rel=\"stylesheet\" type=\"text/css\"
+        href=\"/static/css/main.embedded.min.css?version=20160516\" media=\"screen,
+        projection\">\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"/static/css/main-print.embedded.min.css?version=20130924\"
+        media=\"print\">\n        <link rel='stylesheet' type=\"text/css\" href='/static/css/smoothness/jquery-ui.min.css'>\n
+        \       <!--<![endif]-->\n        <!--[if gte IE 8]>\n        <link rel=\"stylesheet\"
+        href=\"/static/css/main.embedded.min.css?version=20130924\" type=\"text/css\"
+        media=\"screen, projection\">\n        <link rel=\"stylesheet\" href=\"/static/css/main-print.embedded.min.css?version=20130924\"
+        type=\"text/css\" media=\"print\">\n        <![endif]-->\n        <!--[if
+        lt IE 8]>\n        <link rel=\"stylesheet\" href=\"/static/css/main.normal.min.css?version=20130924\"
+        type=\"text/css\" media=\"screen, projection\">\n        <link rel=\"stylesheet\"
+        href=\"/static/css/main-print.normal.min.css?version=20130924\" type=\"text/css\"
+        media=\"print\">\n        <link rel=\"stylesheet\" href=\"/static/css/blueprint/ie.css?version=20130924\"
+        type=\"text/css\" media=\"screen, projection\"><![endif]-->\n        \n        <script
+        type='text/javascript' src='/static/js/jquery-2.0.3.min.js'></script>\n        <script
+        type='text/javascript' src='/static/js/jquery-ui-1.10.3.min.js'></script>\n
+        \       <script type='text/javascript' src=\"/static/js/jquery.ui.widget.js\"></script>\n
+        \       <script type='text/javascript' src=\"/static/js/jquery.iframe-transport.js\"></script>\n
+        \       <script type='text/javascript' src=\"/static/js/jquery.fileupload.js\"></script>\n
+        \       <script type=\"text/javascript\" src=\"/static/js/bootstrap.min.js\"></script>\n
+        \       <script type='text/javascript' src='/static/js/jquery.blockUI.js'></script>\n
+        \       <script src='/static/js/typeahead.bundle.js'></script>\n        <script
+        type=\"text/javascript\">\n            function alert_unexpected(wbn) {\n
+        \               if (wbn === undefined){\n                    wbn = '';\n                }\n
+        \               var msg = '<p> <span class=\"ui-icon ui-icon-alert\" style=\"float:left;
+        margin:0 7px 100px 0;\"></span> A missing package <strong>'+ wbn +'</strong>
+        has been scanned, this incident will be reported. </p>'+\n                    'Please
+        click a picture of shipment and send an email to <em>express-audit@delhivery.com</em>';\n\n
+        \               // create div based on wbn\n                var outerDiv =
+        $(\"<div/>\", {\n                    'id':\"unexpected_pkg_\"+wbn,\n                    'title':'Unexpected
+        Package Scan',\n                    'style':\"display: none;\",\n                    'html':
+        msg\n                    })\n\n                $( outerDiv ).dialog({\n                    modal:
+        false,\n                    height: 250,\n                    width: 400,\n
+        \                   buttons: {\n                        Ok: function() {\n
+        \                           $( this ).dialog( \"close\" );\n                        }\n
+        \                   }\n                });\n            };\n        </script>\n
+        \               <script type=\"text/javascript\">\n            function alert_xray(wbn)
+        {\n                if (wbn === undefined){\n                    wbn = '';\n
+        \               }\n                var msg = '<p> <span class=\"ui-icon ui-icon-alert\"
+        style=\"float:left; margin:0 7px 100px 0;\"></span> A missing package <strong>'+
+        wbn +'</strong> has been scanned, this incident will be reported. </p>'+\n
+        \                   'Shipment need to be X-rayed. Please X-Ray the shipment
+        if available';\n\n                // create div based on wbn\n                var
+        outerDiv = $(\"<div/>\", {\n                    'id':\"xray_pkg_\"+wbn,\n
+        \                   'title':'Xray Package Scan',\n                    'style':\"display:
+        none;\",\n                    'html': msg\n                    })\n\n                $(
+        outerDiv ).dialog({\n                    modal: false,\n                    height:
+        250,\n                    width: 400,\n                    buttons: {\n                        Ok:
+        function() {\n                            $( this ).dialog( \"close\" );\n
+        \                       }\n                    }\n                });\n            };\n
+        \       </script>\n        \n        <style>\n            #center_name {\n
+        \               color:#0066CC;\n            }\n            #center_name:hover
+        {\n                color:#59B4FF;\n                cursor: pointer;\n            }\n
+        \           #select-center:after {\n                content: ' |';\n            }\n
+        \           #select-center .empty-message {\n                padding: 5px
+        10px;\n                text-align: center;\n                background: white;\n
+        \           }\n            .tt-dropdown-menu {\n                min-width:
+        160px;\n                margin-top: 2px;\n                padding: 5px;\n
+        \               background-color: #fff;\n                border: 1px solid
+        #ccc;\n                border: 1px solid rgba(0,0,0,.2);\n                *border-right-width:
+        2px;\n                *border-bottom-width: 2px;\n                -webkit-border-radius:
+        6px;\n                -moz-border-radius: 6px;\n                border-radius:
+        6px;\n                -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);\n                -moz-box-shadow:
+        0 5px 10px rgba(0,0,0,.2);\n                box-shadow: 0 5px 10px rgba(0,0,0,.2);\n
+        \               -webkit-background-clip: padding-box;\n                -moz-background-clip:
+        padding;\n                background-clip: padding-box;\n            }\n            .tt-suggestion.tt-cursor
+        {\n              color: #fff;\n              background-color: #0097cf;\n
+        \           }\n            .tt-suggestion {\n              padding: 3px 20px;\n
+        \             font-size: 12px;\n              line-height: 24px;\n            }\n
+        \           .tt-suggestion.tt-cursor {\n              color: #fff;\n              background-color:
+        #0097cf;\n            }\n            .tt-suggestion.tt-cursor a {\n              color:
+        #fff;\n            }\n            .tt-suggestion p {\n              margin:
+        0;\n            }\n    \t    .nav_elem_link {\n    \t      border-bottom:
+        4px solid #ffffff;\n    \t    }\n\n            tr.high_priority > td {\n                background-color:
+        #82FA58 !important;\n            }\n            tr.air_restricted > td {\n
+        \               background-color: #F2B866 !important;\n            }\n            tr.xray_required
+        > td {\n                background-color: #FA5858 !important;\n            }\n
+        \           tr.surface_mode > td {\n                background-color: #F4FA58
+        !important;\n            }\n            tr.mps_package > td {\n                background-color:
+        #DC9FBC !important;\n            }\n        </style>\n    </head>\n    <body>\n
+        \       <div id=\"container\" class=\"container\">\n            <div id=\"main\"
+        class=\"main\">\n                <header>\n                    <div class=\"span-24
+        noprint\">\n                        <div class=\"span-6 first prepend-top\"
+        style=\"width:220px\">\n                            <a href=\"/\"><img src=\"/static/images/logo.png\"
+        alt=\"Delhivery\" style='{border: 0;}' class=\"logo\" title=\"Delhivery\"
+        /></a>\n                        </div>\n                        <div class=\"span-18
+        last\" style=\"width:720px\">\n                        <nav>\n                            \n
+        \                               <div class=\"column span-3 prepend-top right\">\n
+        \                                   <a href=\"https://track.delhivery.com\"
+        class=\"small awesome green\">Client Login</a>\n                                </div>\n
+        \                               <div class=\"column prepend-top span-11 last
+        right\">\n                                    <ul id=\"minitabs\">\n                                        <li><a
+        href=\"https://www.delhivery.com/index.html\" >Home</a></li>\n                                        <li><a
+        href=\"https://www.delhivery.com/services.html\" >Services</a></li>\n                                        <li><a
+        href=\"https://www.delhivery.com/about-us.html\" >About Us</a></li>\n                                        <li><a
+        href=\"https://www.delhivery.com/careers.html\" >Careers</a></li>\n                                        <li><a
+        href=\"https://www.delhivery.com/contact.html\">Contact</a></li>\n                                    </ul>\n
+        \                               </div>\n                            \n                        </nav>\n
+        \                       </div>\n                    </div>\n                    <hr
+        class=\"noprint\">\n                </header>\n                <section>\n
+        \                   <div class=\"span-24\">\n                        <div
+        id='notification_bar'>\n                            <p></p>\n                        </div>\n
+        \                       \n   \n           <h1>Page not found</h1>\n           <p>The
+        page you requested for was not found on this server.</p>\n   \n\n                    </div>\n
+        \               </section>\n                \n                <hr class=\"space
+        noprint\">\n                <div class=\"push\"></div>\n            </div><!--end
+        of main-->\n            <footer>\n                <hr class=\"noprint\">\n
+        \               <div class=\"span-24 noprint\">\n                    <p class=\"small
+        quiet\">Copyright &copy; <time datetime=\"2011-03-24\">2011</time> SSN Logistics
+        | <a href=\"https://www.delhivery.com/terms-and-conditions.html\">Terms &amp;
+        Conditions</a> | <a href=\"https://www.delhivery.com/privacy-and-security.html\">Privacy
+        &amp; Security</a></p>\n                    \n                </div>\n            </footer>\n
+        \       </div> <!--! end of #container -->\n        <form id=\"global_search_form\"
+        action=\"/p/list/1\" method=\"GET\"></form>\n        <script type='text/javascript'
+        src=\"/static/js/modernizr-1.7.min.js\"></script>\n        <script type='text/javascript'
+        src=\"/static/js/plugins.js?v=1\"></script>\n        <script type='text/javascript'
+        src='/static/js/notify.js'></script>\n        <script type=\"text/javascript\">\n
+        \               var _gaq = _gaq || [];\n                _gaq.push(['_setAccount',
+        'UA-27886886-1']);\n                _gaq.push(['_setDomainName', 'delhivery.com']);\n
+        \               _gaq.push(['_trackPageview']);\n\n                (function()
+        {\n                    var ga = document.createElement('script'); ga.type
+        = 'text/javascript'; ga.async = true;\n                    ga.src = ('https:'
+        == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n
+        \                   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga,
+        s);\n                })();\n        </script>\n        \n        \n        \n
+        \       <script type=\"text/javascript\" src=\"/static/js/navigation.js?version=20150320\"></script>\n
+        \       <script type=\"text/javascript\" src=\"/static/js/jquery.delhivery.js?version=20140331\"></script>\n
+        \       \n    </body>\n</html>\n"
+    http_version: 
+  recorded_at: Mon, 03 Apr 2017 07:16:41 GMT
+recorded_with: VCR 3.0.3

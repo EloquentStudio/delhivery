@@ -2,7 +2,7 @@ require "spec_helper"
 
 RSpec.describe Delhivery::PinCodeService do
   before do
-    Delhivery.configure(api_key: '6ae9242be35bdc8a2a3abc8681bbc2b01939ce86', production: false)
+    Delhivery.configure(api_key: '--api-key-here--', production: false)
   end
 
   describe ".filter" do

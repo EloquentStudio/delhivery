@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://test.delhivery.com/api/p/packing_slip?wbns=3132110000070
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Authorization:
+      - Token --api-key-here--
+      Accept:
+      - application/json
+      Content-type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      allow:
+      - GET, HEAD, OPTIONS
+      content-type:
+      - application/json
+      date:
+      - Mon, 03 Apr 2017 05:39:22 GMT
+      server:
+      - nginx
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains
+      vary:
+      - Cookie
+      x-frame-options:
+      - SAMEORIGIN
+      content-length:
+      - '7691'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: '{"packages": [{"origin": "Dehradun_Mussoori_DC (Uttarakhand)", "prd":
+        "PROQUORE package", "pin": 411036, "cl": "PROQUORE", "cd": "2017-04-03T10:29:41.562",
+        "rph": [""], "barcode": "data:image/png;base64,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",
+        "origin_city": "Dehradun", "weight": 0.5, "pt": "Pre-paid", "rs": 760.95,
+        "destination": "Pune_Magarpatta", "delhivery_logo": "https:/static/images/packing_slip_logo_1.png",
+        "destination_city": "Pune", "tin": "", "oid_barcode": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAAA7CAIAAAACdHpkAAAEUUlEQVR4nO3XP0h6axgH8NesBDEi6AdxqKEgomhojqAaJNoaGhyChqChKXAMiahO1BBILRZFYRHRUNBWhhpECQYRYoMZ/QEdjMIsB9HeO3g5eD3HPPr71X2u9/uZjm/P876P53xJZbwoRqPRaDSmL6QVxYKsmsxGxXWpPqtYcdtcXeqL5W8n7+Ty+oLm+Y4ZFO9triHlz0vlqIrnym+1fBh5QUE0nHNWOI1GwxjjnGs0f+8gXWQVZP4pvSg1ZhZI61J9VnFmZd4u9cVZlYpliu0FvYvvnkF+u6QHIZ9B/rxUjprr0WfdavmDztq8UGVF9AD8JGQUqENGgTpkFKhDRoE6ZBSoQ0aBOmQUqENGgTpkFKhDRoE6ZBSoQ0aBOmQUqENGgTpkFKhDRoE6ZBSoQ0aBOmQUqENGgTpkFKhDRoE6ZBSoQ0aBOmQUqENGgTpkFKhDRoE6ZBSoQ0aBOmQUqENGgTpkFKhDRoE6ZBSoQ0aBOmQUqENGgTpkFKhDRoE6ZBSoQ0aBOmQUqENGgTpkFKhDRoE6ZBSoKy+u7ejoKNeF/KViTa5r6WVBO3zdlbc477tQs17QPH98hrwH5Z3893f4oj6roCAaznnRzTQtLi62trb29/czxgKBgNVq1el0giCYzWbGWDKZtFgs8Xhcr9eLoqjRaBhjc3NzkUhEr9dPTU1ptVp5l9zNzc3GxkYoFLLb7ekVeVdx+zDGlpeXb29vf/36NTExkV7JmlDN6aWDlxan0zk7O2uz2dIvd3Z2IpEI53x1ddXr9XLOj4+P9/f3Oedra2uXl5ecc5fLtbe3xzk/PT3d2tpS7JILh8OpVMpsNksr8q7i9gkGg/Pz85zzzc3Ns7MzxQnVnF4ySur76Nvbm8PhGBwclFZMJlNtbS1jLB6PGwwGxlhTU5PL5fJ4PBcXF/X19YyxioqKWCzGGKupqbm6ulLskqurqysr+8fdk3cVt4/X6+3t7WWM9fT0eL1exQnVnF4yivw+SpPFYjGZTIFAIBQKRaPR6urq9LrdbjcYDC0tLYyxz8/P9/d3n8+XTCY/Pj4YY52dnefn5+Pj4w0NDVVVVdJumV3RaHR6ejq9Pjk5mVmWJbOruH0SiUR5eTljrLKyMpVKfTGhmtNLwb/9j/xP2t3dXV9fF0VxeHj47u6Oc55IJCwWi8PheHl5eX5+5pxbrdaHhwfOud/vX1lZyWxfWlpKf/rLu3LJ/LSVdxW3j8fj2d7e5pw7nc6DgwPFCdWcXjJK7TdTMBgURfHp6WlhYaGjo2NoaCgWizU3Nz8+Po6MjPT19d3f38/MzLS1tV1fX4uiKAiCz+c7OTkJBoPt7e2jo6OMMXmX/CC32314eOh2u7u7u7u6ugYGBuRdxe3DOR8bG2tsbPT7/TabTafTySdUc/p33+ofU2oZVSOZTIbDYUEQtFotYywWi72+vgqCkP6EpYBzHg6HpS+dBCf8Sf/HjMJ/y18YdDVomvvwKgAAAABJRU5ErkJggg==",
+        "sid": "", "cst": "", "rcty": "Dehradun", "snm": "", "sadd": "224, UDYOG VIHAR
+        PHASE IV, GURGAON  122016,", "oid": "42892-122-10912", "radd": "4/2982,STREET
+        NO.4 SHALIMAR PARK EXTN.SHAHDARA DELHI-110032", "address": "B1 flat no 704
+        prestige panorama,Keshav nagar", "rst": "Delhi", "name": "Shweta adlakha",
+        "cl_logo": "", "si": "", "contact": "0000000000", "cod": 0.0, "wbn": "3132110000070",
+        "sort_code": "PNQ/VAD", "rpin": 110032}], "packages_found": 1}'
+    http_version: 
+  recorded_at: Mon, 03 Apr 2017 05:38:18 GMT
+recorded_with: VCR 3.0.3

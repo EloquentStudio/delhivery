@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://test.delhivery.com/c/api/pin-codes/json/?filter_codes=411008
+    uri: https://test.delhivery.com/waybill/api/fetch/json/
     body:
       encoding: US-ASCII
       string: ''
@@ -13,7 +13,7 @@ http_interactions:
       - Token --api-key-here--
       Accept:
       - application/json
-      Content-Type:
+      Content-type:
       - application/json
   response:
     status:
@@ -23,7 +23,7 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 29 Mar 2017 05:58:59 GMT
+      - Mon, 03 Apr 2017 06:03:24 GMT
       server:
       - nginx
       strict-transport-security:
@@ -32,16 +32,13 @@ http_interactions:
       - Authorization, Cookie
       x-frame-options:
       - SAMEORIGIN
-      transfer-encoding:
-      - chunked
+      content-length:
+      - '4'
       connection:
       - Close
     body:
       encoding: UTF-8
-      string: '{"delivery_codes": [{"postal_code": {"district": "Pune", "pin": 411008,
-        "max_amount": 0.0, "pre_paid": "Y", "cash": "Y", "pickup": "Y", "repl": "Y",
-        "cod": "Y", "sort_code": "PNQ/PDP", "is_oda": "N", "state_code": "MH", "max_weight":
-        0.0}}]}'
+      string: 'null'
     http_version: 
-  recorded_at: Wed, 29 Mar 2017 05:57:59 GMT
+  recorded_at: Mon, 03 Apr 2017 06:02:20 GMT
 recorded_with: VCR 3.0.3
