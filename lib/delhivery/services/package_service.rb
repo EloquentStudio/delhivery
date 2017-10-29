@@ -32,7 +32,7 @@ module Delhivery
       end
 
       def edit_path
-        "/api/p/edit/"
+        "/api/p/edit"
       end
     end
   end
