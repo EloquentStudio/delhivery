@@ -19,7 +19,7 @@ module Delhivery
       end
 
       def cancel(*waybill_numbers)
-        connection.post(edit_path, {waybill: waybill_numbers.join(','), cancellation: true})
+        connection.post(edit_path, {waybill: waybill_numbers.join(','), cancellation: "true"})
       end
 
       private
@@ -32,7 +32,7 @@ module Delhivery
       end
 
       def edit_path
-        "/api/p/edit/"
+        "/api/p/edit"
       end
     end
   end
